@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const weather= require("./utils/forecast.js")
 const { response } = require("express")
 
+const port = process.env.PORT || 3000
 
 //define path for express config
 const proot = path.join(__dirname , '../public') 
@@ -77,7 +78,7 @@ app.get('*',(req,res)=>{
     res.render('404',{msg:"sorry this page does'nt exist !!"})
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-    console.log("Server up - runing at 3000")
+    console.log("Server up - runing at " + port)
 })
