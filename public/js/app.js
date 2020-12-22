@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit',(e)=>{
 
     e.preventDefault()
   
-    fetch('http://localhost:3000/weather?country=india&city='+city.value).then((response)=>{
+    fetch('/weather?country=india&city='+city.value).then((response)=>{
 
     response.json().then((data)=>{
 
